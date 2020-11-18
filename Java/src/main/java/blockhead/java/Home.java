@@ -390,7 +390,6 @@ public class Home extends javax.swing.JFrame {
 
         M1B26.setText("jButton6");
 
-        M1B27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blockhead/java/PICTURES/Webp.net-resizeimage (3).jpg"))); // NOI18N
         M1B27.setText("jButton6");
         M1B27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
