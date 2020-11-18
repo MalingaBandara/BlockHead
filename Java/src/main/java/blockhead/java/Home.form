@@ -222,7 +222,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\4.jpg"/>
+                      <Image iconType="3" name="/images/4.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -236,7 +236,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\3.jpg"/>
+                      <Image iconType="3" name="/images/3.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -247,7 +247,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\Webp.net-resizeimage (2).jpg"/>
+                      <Image iconType="3" name="/images/Webp.net-resizeimage (2).jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -258,7 +258,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\2.jpg"/>
+                      <Image iconType="3" name="/images/2.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -269,7 +269,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\Webp.net-resizeimage (1).jpg"/>
+                      <Image iconType="3" name="/images/Webp.net-resizeimage (1).jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -280,7 +280,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\5.jpg"/>
+                      <Image iconType="3" name="/images/5.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -291,7 +291,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\6.jpg"/>
+                      <Image iconType="3" name="/images/6.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -302,7 +302,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\Webp.net-resizeimage.jpg"/>
+                      <Image iconType="3" name="/images/6.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -313,7 +313,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/blockhead/java/images/1.jpg"/>
+                      <Image iconType="3" name="/images/1.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                     <Property name="toolTipText" type="java.lang.String" value="Beear"/>
