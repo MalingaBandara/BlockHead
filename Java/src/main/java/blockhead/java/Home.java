@@ -376,6 +376,7 @@ public class Home extends javax.swing.JFrame {
 
         M1B19.setText("jButton6");
 
+        M1B20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Documents\\NetBeansProjects\\BlockHead\\Java\\src\\main\\java\\blockhead\\java\\New folder\\Malaysia-Naturally-healthy-beverages-Market-Research-Report.jpg")); // NOI18N
         M1B20.setText("jButton6");
 
         M1B21.setText("jButton6");
