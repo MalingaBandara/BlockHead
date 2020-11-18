@@ -187,9 +187,14 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blockhead/java/1.jpg"))); // NOI18N
+        M1B1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\1.jpg")); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
+        M1B1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M1B1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout M1Layout = new javax.swing.GroupLayout(M1);
         M1.setLayout(M1Layout);
@@ -530,6 +535,10 @@ public class Home extends javax.swing.JFrame {
     private void M1B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M1B2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_M1B2ActionPerformed
+
+    private void M1B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M1B1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_M1B1ActionPerformed
 
     /**
      * @param args the command line arguments
