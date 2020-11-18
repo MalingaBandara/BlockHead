@@ -150,6 +150,11 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="M1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="66" green="66" red="66" type="rgb"/>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                   <CardConstraints cardName="card2"/>
@@ -164,21 +169,13 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="M1B4" linkSize="1" min="-2" pref="112" max="-2" attributes="0"/>
                               <Component id="M1B7" linkSize="1" min="-2" pref="112" max="-2" attributes="0"/>
-                              <Component id="M1B1" linkSize="1" min="-2" pref="153" max="-2" attributes="0"/>
+                              <Component id="M1B1" linkSize="1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                          <EmptySpace pref="151" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="26" max="32767" attributes="0"/>
-                                  <Component id="M1B2" linkSize="1" min="-2" pref="112" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="M1B8" linkSize="1" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
-                                      <Component id="M1B5" linkSize="1" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="M1B2" linkSize="1" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="M1B8" linkSize="1" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="M1B5" linkSize="1" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -194,18 +191,20 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="M1B3" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="M1B2" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="M1B1" linkSize="2" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="M1B3" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
+                                  <Component id="M1B2" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="M1B1" linkSize="2" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="M1B6" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B5" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B4" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="M1B7" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B8" linkSize="2" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
@@ -219,8 +218,17 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="M1B2">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="C:\Users\Acer\Documents\NetBeansProjects\BlockHead\Java\src\main\java\blockhead\java\New folder\Webp.net-resizeimage.jpg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M1B2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="M1B3">
                   <Properties>
@@ -259,7 +267,14 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="M1B1">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="33" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="C:\Users\Acer\Documents\NetBeansProjects\BlockHead\Java\src\main\java\blockhead\java\New folder\Webp.net-resizeimage_1.jpg"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Beear"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -314,7 +329,7 @@
                               <Component id="M1B10" linkSize="4" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B18" linkSize="4" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
+                          <EmptySpace pref="198" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="M1B14" linkSize="4" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B13" linkSize="4" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
@@ -429,7 +444,7 @@
                               <Component id="M1B28" linkSize="10" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B36" linkSize="10" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
+                          <EmptySpace pref="198" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="M1B32" linkSize="10" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B31" linkSize="10" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
@@ -544,7 +559,7 @@
                               <Component id="M1B19" linkSize="8" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B27" linkSize="8" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
+                          <EmptySpace pref="198" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="M1B23" linkSize="8" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="M1B22" linkSize="8" alignment="3" min="-2" pref="91" max="-2" attributes="0"/>
