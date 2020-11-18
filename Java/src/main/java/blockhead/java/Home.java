@@ -164,7 +164,6 @@ public class Home extends javax.swing.JFrame {
         M1.setBackground(new java.awt.Color(102, 102, 102));
 
         M1B2.setBackground(new java.awt.Color(51, 51, 51));
-        M1B2.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/images/1.jpg")); // NOI18N
         M1B2.setText("jButton6");
         M1B2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +193,7 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/images/1.jpg")); // NOI18N
+        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/src/images/4.jpg")); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
         M1B1.addActionListener(new java.awt.event.ActionListener() {
@@ -242,7 +241,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(M1B6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B5, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M1B7, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B8, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
