@@ -5,6 +5,9 @@
  */
 package blockhead.java;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +24,9 @@ public class Home extends javax.swing.JFrame {
        
     }
 
+    
+    
+    
      public void switchPanels(JPanel panel){
          MiddlePanel.removeAll();
          MiddlePanel.add(panel);
@@ -187,7 +193,7 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\1.jpg")); // NOI18N
+        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/src/main/java/blockhead/java/1.jpg")); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
         M1B1.addActionListener(new java.awt.event.ActionListener() {
