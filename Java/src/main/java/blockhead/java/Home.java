@@ -193,7 +193,7 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/src/images/1.jpg")); // NOI18N
+        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/images/1.jpg")); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
         M1B1.addActionListener(new java.awt.event.ActionListener() {
