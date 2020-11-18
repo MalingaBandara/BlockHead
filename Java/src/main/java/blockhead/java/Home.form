@@ -313,7 +313,7 @@
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\BlockHead\images\1.jpg"/>
+                      <Image iconType="3" name="/blockhead/java/images/1.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                     <Property name="toolTipText" type="java.lang.String" value="Beear"/>
@@ -626,9 +626,6 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="M1B20">
                   <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Acer\Documents\NetBeansProjects\BlockHead\Java\src\main\java\blockhead\java\New folder\Malaysia-Naturally-healthy-beverages-Market-Research-Report.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                 </Component>

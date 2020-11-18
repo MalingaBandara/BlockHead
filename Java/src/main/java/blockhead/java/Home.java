@@ -195,7 +195,7 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Documents\\BlockHead\\images\\1.jpg")); // NOI18N
+        M1B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blockhead/java/images/1.jpg"))); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
 
@@ -398,7 +398,6 @@ public class Home extends javax.swing.JFrame {
 
         M1B19.setText("jButton6");
 
-        M1B20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Documents\\NetBeansProjects\\BlockHead\\Java\\src\\main\\java\\blockhead\\java\\New folder\\Malaysia-Naturally-healthy-beverages-Market-Research-Report.jpg")); // NOI18N
         M1B20.setText("jButton6");
 
         M1B21.setText("jButton6");
