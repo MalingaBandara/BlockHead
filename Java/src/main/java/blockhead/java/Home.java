@@ -158,7 +158,6 @@ public class Home extends javax.swing.JFrame {
         M1.setBackground(new java.awt.Color(102, 102, 102));
 
         M1B2.setBackground(new java.awt.Color(51, 51, 51));
-        M1B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/4.jpg"))); // NOI18N
         M1B2.setText("jButton6");
         M1B2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,35 +166,27 @@ public class Home extends javax.swing.JFrame {
         });
 
         M1B3.setBackground(new java.awt.Color(51, 51, 51));
-        M1B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3.jpg"))); // NOI18N
         M1B3.setText("jButton6");
 
         M1B4.setBackground(new java.awt.Color(51, 51, 51));
-        M1B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Webp.net-resizeimage (2).jpg"))); // NOI18N
         M1B4.setText("jButton6");
 
         M1B5.setBackground(new java.awt.Color(51, 51, 51));
-        M1B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.jpg"))); // NOI18N
         M1B5.setText("jButton6");
 
         M1B6.setBackground(new java.awt.Color(51, 51, 51));
-        M1B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Webp.net-resizeimage (1).jpg"))); // NOI18N
         M1B6.setText("jButton6");
 
         M1B7.setBackground(new java.awt.Color(51, 51, 51));
-        M1B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/5.jpg"))); // NOI18N
         M1B7.setText("jButton6");
 
         M1B8.setBackground(new java.awt.Color(51, 51, 51));
-        M1B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/6.jpg"))); // NOI18N
         M1B8.setText("jButton6");
 
         M1B9.setBackground(new java.awt.Color(51, 51, 51));
-        M1B9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/6.jpg"))); // NOI18N
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.jpg"))); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
 

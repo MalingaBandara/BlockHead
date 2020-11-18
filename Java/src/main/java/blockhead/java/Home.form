@@ -221,9 +221,6 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/4.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                   <Events>
@@ -235,9 +232,6 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/3.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                 </Component>
@@ -245,9 +239,6 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
-                    </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/Webp.net-resizeimage (2).jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -257,9 +248,6 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/2.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                 </Component>
@@ -267,9 +255,6 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
-                    </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/Webp.net-resizeimage (1).jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -279,9 +264,6 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/5.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                 </Component>
@@ -289,9 +271,6 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
-                    </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/6.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
@@ -301,9 +280,6 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/6.jpg"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                   </Properties>
                 </Component>
@@ -311,9 +287,6 @@
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
-                    </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/1.jpg"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="jButton6"/>
                     <Property name="toolTipText" type="java.lang.String" value="Beear"/>
