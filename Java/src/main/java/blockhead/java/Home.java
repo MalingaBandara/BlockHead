@@ -60,6 +60,7 @@ public class Home extends javax.swing.JFrame {
         M1B8 = new javax.swing.JButton();
         M1B9 = new javax.swing.JButton();
         M1B1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         M2 = new javax.swing.JPanel();
         M1B10 = new javax.swing.JButton();
         M1B11 = new javax.swing.JButton();
@@ -193,7 +194,6 @@ public class Home extends javax.swing.JFrame {
         M1B9.setText("jButton6");
 
         M1B1.setBackground(new java.awt.Color(51, 51, 51));
-        M1B1.setIcon(new javax.swing.ImageIcon("/Users/malinga/NetBeansProjects/BlockHeads/BlockHead/Java/src/images/4.jpg")); // NOI18N
         M1B1.setText("jButton6");
         M1B1.setToolTipText("Beear");
         M1B1.addActionListener(new java.awt.event.ActionListener() {
@@ -201,6 +201,8 @@ public class Home extends javax.swing.JFrame {
                 M1B1ActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("test");
 
         javax.swing.GroupLayout M1Layout = new javax.swing.GroupLayout(M1);
         M1.setLayout(M1Layout);
@@ -212,7 +214,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(M1B4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B7, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(M1B2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,7 +224,9 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(M1B6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(M1B9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(118, 118, 118))
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addGap(49, 49, 49))
         );
 
         M1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {M1B1, M1B2, M1B3, M1B4, M1B5, M1B6, M1B7, M1B8, M1B9});
@@ -230,12 +234,17 @@ public class Home extends javax.swing.JFrame {
         M1Layout.setVerticalGroup(
             M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(M1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
                 .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(M1B3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(M1B2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(M1B1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(M1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(M1B3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(M1B2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(M1B1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(M1Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel1)))
                 .addGap(39, 39, 39)
                 .addGroup(M1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M1B6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -630,5 +639,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
