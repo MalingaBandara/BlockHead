@@ -176,32 +176,60 @@ public class Home extends javax.swing.JFrame {
 
         MiddlePanel.setLayout(new java.awt.CardLayout());
 
-        j1.setBackground(new java.awt.Color(102, 102, 102));
+        j1.setBackground(new java.awt.Color(51, 0, 0));
+        j1.setForeground(new java.awt.Color(51, 0, 0));
 
+        jButton5.setBackground(new java.awt.Color(51, 0, 0));
+        jButton5.setForeground(new java.awt.Color(51, 51, 51));
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\1.jpg")); // NOI18N
         jButton5.setText("jButton5");
         jButton5.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton24.setBackground(new java.awt.Color(51, 0, 0));
+        jButton24.setForeground(new java.awt.Color(51, 51, 51));
+        jButton24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\3.jpg")); // NOI18N
         jButton24.setText("jButton5");
         jButton24.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton25.setBackground(new java.awt.Color(51, 0, 0));
+        jButton25.setForeground(new java.awt.Color(51, 51, 51));
+        jButton25.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\5.jpg")); // NOI18N
         jButton25.setText("jButton5");
         jButton25.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton26.setBackground(new java.awt.Color(51, 0, 0));
+        jButton26.setForeground(new java.awt.Color(51, 51, 51));
+        jButton26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\6.jpg")); // NOI18N
         jButton26.setText("jButton5");
         jButton26.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton27.setBackground(new java.awt.Color(51, 0, 0));
+        jButton27.setForeground(new java.awt.Color(51, 51, 51));
+        jButton27.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\Webp.net-resizeimage.jpg")); // NOI18N
         jButton27.setText("jButton5");
         jButton27.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton28.setBackground(new java.awt.Color(51, 0, 0));
+        jButton28.setForeground(new java.awt.Color(51, 51, 51));
+        jButton28.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\Webp.net-resizeimage (2).jpg")); // NOI18N
         jButton28.setText("jButton5");
         jButton28.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton29.setBackground(new java.awt.Color(51, 0, 0));
+        jButton29.setForeground(new java.awt.Color(51, 51, 51));
+        jButton29.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\Webp.net-resizeimage (1).jpg")); // NOI18N
         jButton29.setText("jButton5");
         jButton29.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton30.setBackground(new java.awt.Color(51, 0, 0));
+        jButton30.setForeground(new java.awt.Color(51, 51, 51));
+        jButton30.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\2.jpg")); // NOI18N
         jButton30.setText("jButton5");
         jButton30.setPreferredSize(new java.awt.Dimension(149, 183));
 
+        jButton31.setBackground(new java.awt.Color(51, 0, 0));
+        jButton31.setForeground(new java.awt.Color(51, 51, 51));
+        jButton31.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\images\\4.jpg")); // NOI18N
         jButton31.setText("jButton5");
         jButton31.setPreferredSize(new java.awt.Dimension(149, 183));
 
@@ -678,24 +706,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel j2;
     private javax.swing.JPanel j3;
     private javax.swing.JPanel j4;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton100;
     private javax.swing.JButton jButton101;
     private javax.swing.JButton jButton102;
     private javax.swing.JButton jButton103;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
@@ -719,7 +733,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton60;
     private javax.swing.JButton jButton61;
     private javax.swing.JButton jButton62;
@@ -728,9 +741,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton65;
     private javax.swing.JButton jButton66;
     private javax.swing.JButton jButton67;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton95;
     private javax.swing.JButton jButton96;
     private javax.swing.JButton jButton97;
@@ -745,8 +755,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 }
