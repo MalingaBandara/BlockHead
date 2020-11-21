@@ -214,6 +214,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(51, 0, 0));
         jButton5.setForeground(new java.awt.Color(51, 51, 51));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1.jpg"))); // NOI18N
         jButton5.setText("jButton5");
         jButton5.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -224,11 +225,13 @@ public class Home extends javax.swing.JFrame {
 
         jButton24.setBackground(new java.awt.Color(51, 0, 0));
         jButton24.setForeground(new java.awt.Color(51, 51, 51));
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.jpg"))); // NOI18N
         jButton24.setText("jButton5");
         jButton24.setPreferredSize(new java.awt.Dimension(149, 183));
 
         jButton25.setBackground(new java.awt.Color(51, 0, 0));
         jButton25.setForeground(new java.awt.Color(51, 51, 51));
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5.jpg"))); // NOI18N
         jButton25.setText("jButton5");
         jButton25.setPreferredSize(new java.awt.Dimension(149, 183));
 
@@ -259,6 +262,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton31.setBackground(new java.awt.Color(51, 0, 0));
         jButton31.setForeground(new java.awt.Color(51, 51, 51));
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.jpg"))); // NOI18N
         jButton31.setText("jButton5");
         jButton31.setPreferredSize(new java.awt.Dimension(149, 183));
 
@@ -318,11 +322,13 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(j1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(j1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, j1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(150, 150, 150)
                 .addGroup(j1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(j1Layout.createSequentialGroup()
@@ -989,7 +995,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(BillPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+                .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
