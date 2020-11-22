@@ -1268,7 +1268,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='101'";
 
             Statement sta = connection.createStatement();
 
@@ -1322,7 +1322,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update dessert  set  QTY=QTY-1 where ItemCode='101'";
 
             Statement sta = connection.createStatement();
 
@@ -1350,7 +1350,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update meals set  QTY=QTY-1 where ItemCode='101'";
 
             Statement sta = connection.createStatement();
 
@@ -1586,7 +1586,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='102'";
 
             Statement sta = connection.createStatement();
 
@@ -1613,7 +1613,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='103'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='103'";
 
             Statement sta = connection.createStatement();
 
@@ -1640,7 +1640,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='104'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='104'";
 
             Statement sta = connection.createStatement();
 
@@ -1667,7 +1667,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='105'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='105'";
 
             Statement sta = connection.createStatement();
 
@@ -1694,7 +1694,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='106'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='106'";
 
             Statement sta = connection.createStatement();
 
@@ -1720,7 +1720,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='107'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='107'";
 
             Statement sta = connection.createStatement();
 
@@ -1747,7 +1747,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='108'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='108'";
 
             Statement sta = connection.createStatement();
 
@@ -1774,7 +1774,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='109'";
+            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='109'";
 
             Statement sta = connection.createStatement();
 
@@ -1800,7 +1800,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='102'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='102'";
 
             Statement sta = connection.createStatement();
 
@@ -1827,7 +1827,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='104'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='104'";
 
             Statement sta = connection.createStatement();
 
@@ -1854,7 +1854,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='105'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='105'";
 
             Statement sta = connection.createStatement();
 
@@ -1881,7 +1881,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='106'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='106'";
 
             Statement sta = connection.createStatement();
 
@@ -1908,7 +1908,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='107'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='107'";
 
             Statement sta = connection.createStatement();
 
@@ -1935,7 +1935,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='108'";
+            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='108'";
 
             Statement sta = connection.createStatement();
 
@@ -1962,7 +1962,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='109'";
+            String quer = "Update ShortEats set QTY=QTY-1 where ItemCode='109'";
 
             Statement sta = connection.createStatement();
 
@@ -1989,7 +1989,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='102'";
+            String quer = "Update  meals set QTY=QTY-1 where ItemCode='102'";
 
             Statement sta = connection.createStatement();
 
@@ -2015,7 +2015,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='103'";
+            String quer = "Update meals set  QTY=QTY-1 where ItemCode='103'";
 
             Statement sta = connection.createStatement();
 
@@ -2040,7 +2040,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='104'";
+            String quer = "Update meals set QTY=QTY-1 where ItemCode='104'";
 
             Statement sta = connection.createStatement();
 
@@ -2066,7 +2066,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='105'";
+            String quer = "Update meals set  QTY=QTY-1 where ItemCode='105'";
 
             Statement sta = connection.createStatement();
 
@@ -2092,7 +2092,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='106'";
+            String quer = "Update meals set QTY=QTY-1 where ItemCode='106'";
 
             Statement sta = connection.createStatement();
 
@@ -2118,7 +2118,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='107'";
+            String quer = "Update meals set QTY=QTY-1 where ItemCode='107'";
 
             Statement sta = connection.createStatement();
 
@@ -2144,7 +2144,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='108'";
+            String quer = "Update meals set  QTY=QTY-1 where ItemCode='108'";
 
             Statement sta = connection.createStatement();
 
@@ -2169,7 +2169,7 @@ public class Home extends javax.swing.JFrame {
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update set meals QTY=QTY-1 where ItemCode='109'";
+            String quer = "Update meals set QTY=QTY-1 where ItemCode='109'";
 
             Statement sta = connection.createStatement();
 
