@@ -5,6 +5,10 @@
  */
 package pos;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -230,7 +234,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label1)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MiddlePanel.setLayout(new java.awt.CardLayout());
@@ -254,43 +258,83 @@ public class Home extends javax.swing.JFrame {
         jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.jpg"))); // NOI18N
         jButton24.setText("jButton5");
         jButton24.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
 
         jButton25.setBackground(new java.awt.Color(51, 0, 0));
         jButton25.setForeground(new java.awt.Color(51, 51, 51));
         jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5.jpg"))); // NOI18N
         jButton25.setText("jButton5");
         jButton25.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
 
         jButton26.setBackground(new java.awt.Color(51, 0, 0));
         jButton26.setForeground(new java.awt.Color(51, 51, 51));
         jButton26.setText("jButton5");
         jButton26.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
 
         jButton27.setBackground(new java.awt.Color(51, 0, 0));
         jButton27.setForeground(new java.awt.Color(51, 51, 51));
         jButton27.setText("jButton5");
         jButton27.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton28.setBackground(new java.awt.Color(51, 0, 0));
         jButton28.setForeground(new java.awt.Color(51, 51, 51));
         jButton28.setText("jButton5");
         jButton28.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
 
         jButton29.setBackground(new java.awt.Color(51, 0, 0));
         jButton29.setForeground(new java.awt.Color(51, 51, 51));
         jButton29.setText("jButton5");
         jButton29.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
 
         jButton30.setBackground(new java.awt.Color(51, 0, 0));
         jButton30.setForeground(new java.awt.Color(51, 51, 51));
         jButton30.setText("jButton5");
         jButton30.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
 
         jButton31.setBackground(new java.awt.Color(51, 0, 0));
         jButton31.setForeground(new java.awt.Color(51, 51, 51));
         jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.jpg"))); // NOI18N
         jButton31.setText("jButton5");
         jButton31.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -460,36 +504,71 @@ public class Home extends javax.swing.JFrame {
         jButton33.setForeground(new java.awt.Color(51, 51, 51));
         jButton33.setText("jButton5");
         jButton33.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
 
         jButton38.setBackground(new java.awt.Color(51, 0, 0));
         jButton38.setForeground(new java.awt.Color(51, 51, 51));
         jButton38.setText("jButton5");
         jButton38.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
 
         jButton39.setBackground(new java.awt.Color(51, 0, 0));
         jButton39.setForeground(new java.awt.Color(51, 51, 51));
         jButton39.setText("jButton5");
         jButton39.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
 
         jButton40.setBackground(new java.awt.Color(51, 0, 0));
         jButton40.setForeground(new java.awt.Color(51, 51, 51));
         jButton40.setText("jButton5");
         jButton40.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
 
         jButton50.setBackground(new java.awt.Color(51, 0, 0));
         jButton50.setForeground(new java.awt.Color(51, 51, 51));
         jButton50.setText("jButton5");
         jButton50.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton50ActionPerformed(evt);
+            }
+        });
 
         jButton51.setBackground(new java.awt.Color(51, 0, 0));
         jButton51.setForeground(new java.awt.Color(51, 51, 51));
         jButton51.setText("jButton5");
         jButton51.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton51ActionPerformed(evt);
+            }
+        });
 
         jButton52.setBackground(new java.awt.Color(51, 0, 0));
         jButton52.setForeground(new java.awt.Color(51, 51, 51));
         jButton52.setText("jButton5");
         jButton52.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton52ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
@@ -644,41 +723,81 @@ public class Home extends javax.swing.JFrame {
         jButton53.setForeground(new java.awt.Color(51, 51, 51));
         jButton53.setText("jButton5");
         jButton53.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton53ActionPerformed(evt);
+            }
+        });
 
         jButton54.setBackground(new java.awt.Color(51, 0, 0));
         jButton54.setForeground(new java.awt.Color(51, 51, 51));
         jButton54.setText("jButton5");
         jButton54.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton54ActionPerformed(evt);
+            }
+        });
 
         jButton55.setBackground(new java.awt.Color(51, 0, 0));
         jButton55.setForeground(new java.awt.Color(51, 51, 51));
         jButton55.setText("jButton5");
         jButton55.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton55ActionPerformed(evt);
+            }
+        });
 
         jButton56.setBackground(new java.awt.Color(51, 0, 0));
         jButton56.setForeground(new java.awt.Color(51, 51, 51));
         jButton56.setText("jButton5");
         jButton56.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton56ActionPerformed(evt);
+            }
+        });
 
         jButton57.setBackground(new java.awt.Color(51, 0, 0));
         jButton57.setForeground(new java.awt.Color(51, 51, 51));
         jButton57.setText("jButton5");
         jButton57.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton57ActionPerformed(evt);
+            }
+        });
 
         jButton58.setBackground(new java.awt.Color(51, 0, 0));
         jButton58.setForeground(new java.awt.Color(51, 51, 51));
         jButton58.setText("jButton5");
         jButton58.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton58ActionPerformed(evt);
+            }
+        });
 
         jButton68.setBackground(new java.awt.Color(51, 0, 0));
         jButton68.setForeground(new java.awt.Color(51, 51, 51));
         jButton68.setText("jButton5");
         jButton68.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton68.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton68ActionPerformed(evt);
+            }
+        });
 
         jButton69.setBackground(new java.awt.Color(51, 0, 0));
         jButton69.setForeground(new java.awt.Color(51, 51, 51));
         jButton69.setText("jButton5");
         jButton69.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton69ActionPerformed(evt);
+            }
+        });
 
         jLabel55.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
@@ -723,7 +842,7 @@ public class Home extends javax.swing.JFrame {
         jLabel63.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel63.setText("Apple Juice");
+        jLabel63.setText("waffle");
 
         javax.swing.GroupLayout j3Layout = new javax.swing.GroupLayout(j3);
         j3.setLayout(j3Layout);
@@ -838,41 +957,81 @@ public class Home extends javax.swing.JFrame {
         jButton70.setForeground(new java.awt.Color(51, 51, 51));
         jButton70.setText("jButton5");
         jButton70.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton70ActionPerformed(evt);
+            }
+        });
 
         jButton71.setBackground(new java.awt.Color(51, 0, 0));
         jButton71.setForeground(new java.awt.Color(51, 51, 51));
         jButton71.setText("jButton5");
         jButton71.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton71ActionPerformed(evt);
+            }
+        });
 
         jButton72.setBackground(new java.awt.Color(51, 0, 0));
         jButton72.setForeground(new java.awt.Color(51, 51, 51));
         jButton72.setText("jButton5");
         jButton72.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton72.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton72ActionPerformed(evt);
+            }
+        });
 
         jButton73.setBackground(new java.awt.Color(51, 0, 0));
         jButton73.setForeground(new java.awt.Color(51, 51, 51));
         jButton73.setText("jButton5");
         jButton73.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton73ActionPerformed(evt);
+            }
+        });
 
         jButton74.setBackground(new java.awt.Color(51, 0, 0));
         jButton74.setForeground(new java.awt.Color(51, 51, 51));
         jButton74.setText("jButton5");
         jButton74.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton74.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton74ActionPerformed(evt);
+            }
+        });
 
         jButton75.setBackground(new java.awt.Color(51, 0, 0));
         jButton75.setForeground(new java.awt.Color(51, 51, 51));
         jButton75.setText("jButton5");
         jButton75.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton75ActionPerformed(evt);
+            }
+        });
 
         jButton76.setBackground(new java.awt.Color(51, 0, 0));
         jButton76.setForeground(new java.awt.Color(51, 51, 51));
         jButton76.setText("jButton5");
         jButton76.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton76.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton76ActionPerformed(evt);
+            }
+        });
 
         jButton77.setBackground(new java.awt.Color(51, 0, 0));
         jButton77.setForeground(new java.awt.Color(51, 51, 51));
         jButton77.setText("jButton5");
         jButton77.setPreferredSize(new java.awt.Dimension(149, 183));
+        jButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton77ActionPerformed(evt);
+            }
+        });
 
         jLabel64.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
@@ -1057,6 +1216,10 @@ public class Home extends javax.swing.JFrame {
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
         switchPanels(j1);
+        
+       
+        
+        
     }//GEN-LAST:event_jButton35ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
@@ -1072,26 +1235,957 @@ public class Home extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
         // TODO add your handling code here:
-        int x=10,y=50;
-        label1.setText(String.valueOf(x+y));
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='101'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='101'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='103'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='101'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='101'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='102'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='103'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='104'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        // TODO add your handling code here:
+        Pos po = new Pos();
+        
+         //item quantity reduce from database   
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='105'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+       
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='106'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='107'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database   
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='108'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database        
+        Pos po = new Pos();
+       
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update bever set QTY=QTY-1 where ItemCode='109'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
+        // TODO add your handling code here:
+        
+      //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='101'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton69ActionPerformed
+
+    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='103'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton53ActionPerformed
+
+    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='104'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton54ActionPerformed
+
+    private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='105'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton55ActionPerformed
+
+    private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='106'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton56ActionPerformed
+
+    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
+        // TODO add your handling code here:
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='107'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton57ActionPerformed
+
+    private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
+        // TODO add your handling code here:
+       
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='108'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton58ActionPerformed
+
+    private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update  set dessert QTY=QTY-1 where ItemCode='109'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton68ActionPerformed
+
+    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
+        // TODO add your handling code here:
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='102'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton52ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='104'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='105'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='106'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='107'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='108'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton50ActionPerformed
+
+    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+        // TODO add your handling code here:
+        
+         //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='109'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+    }//GEN-LAST:event_jButton51ActionPerformed
+
+    private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='102'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton77ActionPerformed
+
+    private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='103'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton70ActionPerformed
+
+    private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
+        // TODO add your handling code here:
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='104'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton71ActionPerformed
+
+    private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='105'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton72ActionPerformed
+
+    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='106'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton73ActionPerformed
+
+    private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='107'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton74ActionPerformed
+
+    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
+        // TODO add your handling code here:
+        
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='108'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
+        // TODO add your handling code here:
+        //item quantity reduce from database
+        Pos po = new Pos();
+        try{
+            Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
+
+            String quer = "Update set meals QTY=QTY-1 where ItemCode='109'";
+
+            Statement sta = connection.createStatement();
+
+            int x = sta.executeUpdate(quer);
+            if (x==0) {
+                JOptionPane.showMessageDialog(null, "This is already exist");
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Recode is updated");
+            }
+
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_jButton76ActionPerformed
 
     /**
      * @param args the command line arguments
