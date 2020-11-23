@@ -10,6 +10,8 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -49,10 +51,6 @@ public class Home extends javax.swing.JFrame {
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
-        BillPanel = new javax.swing.JPanel();
-        label1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         MiddlePanel = new javax.swing.JPanel();
         j1 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
@@ -130,6 +128,10 @@ public class Home extends javax.swing.JFrame {
         jLabel70 = new javax.swing.JLabel();
         jLabel71 = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        BillPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BTableInfo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -190,51 +192,6 @@ public class Home extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89))
-        );
-
-        BillPanel.setBackground(new java.awt.Color(16, 24, 32));
-        BillPanel.setForeground(new java.awt.Color(0, 0, 51));
-
-        label1.setText("jLabel1");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Item Name", "Price", "QTY"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-
-        javax.swing.GroupLayout BillPanelLayout = new javax.swing.GroupLayout(BillPanel);
-        BillPanel.setLayout(BillPanelLayout);
-        BillPanelLayout.setHorizontalGroup(
-            BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BillPanelLayout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(label1)
-                .addGap(0, 115, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-        );
-        BillPanelLayout.setVerticalGroup(
-            BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BillPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MiddlePanel.setLayout(new java.awt.CardLayout());
@@ -937,7 +894,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(j3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1188,14 +1145,51 @@ public class Home extends javax.swing.JFrame {
 
         MiddlePanel.add(j4, "card2");
 
+        BillPanel.setBackground(new java.awt.Color(16, 24, 32));
+        BillPanel.setForeground(new java.awt.Color(0, 0, 51));
+
+        BTableInfo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Item Code", "Item Name", "Price", "QTY"
+            }
+        ));
+        jScrollPane1.setViewportView(BTableInfo);
+
+        javax.swing.GroupLayout BillPanelLayout = new javax.swing.GroupLayout(BillPanel);
+        BillPanel.setLayout(BillPanelLayout);
+        BillPanelLayout.setHorizontalGroup(
+            BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        BillPanelLayout.setVerticalGroup(
+            BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BillPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 394, Short.MAX_VALUE))
+        );
+
+        jScrollPane2.setViewportView(BillPanel);
+
         javax.swing.GroupLayout FullpanelLayout = new javax.swing.GroupLayout(Fullpanel);
         Fullpanel.setLayout(FullpanelLayout);
         FullpanelLayout.setHorizontalGroup(
             FullpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FullpanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(BillPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(2, 2, 2)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1207,8 +1201,8 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(BillPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jScrollPane2)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1251,6 +1245,20 @@ public class Home extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
         // TODO add your handling code here:
+           String ItemCode="101";
+           String name = "cream soda";
+        
+            int price = 100;
+            int  qty =0;
+            
+            String data[] = {ItemCode,name,Integer.toString(price),Integer.toString(qty+1)};
+            qty++;
+            DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+            tblModel.addRow(data);
+           
+            
+            
+        
         
          //item quantity reduce from database
         Pos po = new Pos();
@@ -2239,6 +2247,7 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable BTableInfo;
     private javax.swing.JPanel BillPanel;
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel Fullpanel;
@@ -2324,7 +2333,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JLabel label1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
