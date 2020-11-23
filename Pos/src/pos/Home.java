@@ -485,8 +485,9 @@ public class Home extends javax.swing.JFrame {
         j2.setBackground(new java.awt.Color(242, 170, 76));
         j2.setForeground(new java.awt.Color(51, 0, 0));
 
-        jButton6.setBackground(new java.awt.Color(51, 0, 0));
+        jButton6.setBackground(new java.awt.Color(242, 170, 76));
         jButton6.setForeground(new java.awt.Color(51, 51, 51));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/rolls.jpg"))); // NOI18N
         jButton6.setText("jButton5");
         jButton6.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -495,8 +496,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton32.setBackground(new java.awt.Color(51, 0, 0));
+        jButton32.setBackground(new java.awt.Color(242, 170, 76));
         jButton32.setForeground(new java.awt.Color(51, 51, 51));
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/burger.jpg"))); // NOI18N
         jButton32.setText("jButton5");
         jButton32.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton32.addActionListener(new java.awt.event.ActionListener() {
@@ -505,8 +507,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton33.setBackground(new java.awt.Color(51, 0, 0));
+        jButton33.setBackground(new java.awt.Color(242, 170, 76));
         jButton33.setForeground(new java.awt.Color(51, 51, 51));
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/cream bun.jpg"))); // NOI18N
         jButton33.setText("jButton5");
         jButton33.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton33.addActionListener(new java.awt.event.ActionListener() {
@@ -515,8 +518,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton38.setBackground(new java.awt.Color(51, 0, 0));
+        jButton38.setBackground(new java.awt.Color(242, 170, 76));
         jButton38.setForeground(new java.awt.Color(51, 51, 51));
+        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/hot dog.jpg"))); // NOI18N
         jButton38.setText("jButton5");
         jButton38.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton38.addActionListener(new java.awt.event.ActionListener() {
@@ -525,8 +529,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton39.setBackground(new java.awt.Color(51, 0, 0));
+        jButton39.setBackground(new java.awt.Color(242, 170, 76));
         jButton39.setForeground(new java.awt.Color(51, 51, 51));
+        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/vegetable bun.jpg"))); // NOI18N
         jButton39.setText("jButton5");
         jButton39.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton39.addActionListener(new java.awt.event.ActionListener() {
@@ -535,8 +540,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton40.setBackground(new java.awt.Color(51, 0, 0));
+        jButton40.setBackground(new java.awt.Color(242, 170, 76));
         jButton40.setForeground(new java.awt.Color(51, 51, 51));
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/pastry.jpg"))); // NOI18N
         jButton40.setText("jButton5");
         jButton40.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton40.addActionListener(new java.awt.event.ActionListener() {
@@ -545,8 +551,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton50.setBackground(new java.awt.Color(51, 0, 0));
+        jButton50.setBackground(new java.awt.Color(242, 170, 76));
         jButton50.setForeground(new java.awt.Color(51, 51, 51));
+        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/patis.jpg"))); // NOI18N
         jButton50.setText("jButton5");
         jButton50.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton50.addActionListener(new java.awt.event.ActionListener() {
@@ -555,8 +562,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton51.setBackground(new java.awt.Color(51, 0, 0));
+        jButton51.setBackground(new java.awt.Color(242, 170, 76));
         jButton51.setForeground(new java.awt.Color(51, 51, 51));
+        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/cutlets.jpg"))); // NOI18N
         jButton51.setText("jButton5");
         jButton51.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton51.addActionListener(new java.awt.event.ActionListener() {
@@ -565,8 +573,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton52.setBackground(new java.awt.Color(51, 0, 0));
+        jButton52.setBackground(new java.awt.Color(242, 170, 76));
         jButton52.setForeground(new java.awt.Color(51, 51, 51));
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/fish bun.jpg"))); // NOI18N
         jButton52.setText("jButton5");
         jButton52.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton52.addActionListener(new java.awt.event.ActionListener() {
@@ -659,15 +668,15 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton51, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(30, 30, 30))
             .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(j2Layout.createSequentialGroup()
                     .addGap(40, 40, 40)
                     .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(493, Short.MAX_VALUE)))
+                    .addContainerGap(495, Short.MAX_VALUE)))
         );
         j2Layout.setVerticalGroup(
             j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -691,11 +700,11 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -704,7 +713,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
             .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, j2Layout.createSequentialGroup()
-                    .addContainerGap(478, Short.MAX_VALUE)
+                    .addContainerGap(483, Short.MAX_VALUE)
                     .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(287, 287, 287)))
         );
@@ -928,7 +937,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(j3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
