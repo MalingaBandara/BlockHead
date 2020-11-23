@@ -1150,17 +1150,10 @@ public class Home extends javax.swing.JFrame {
 
         BTableInfo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Item Code", "Item Name", "Price", "QTY"
+                "Item Name", "Price", "QTY"
             }
         ));
         jScrollPane1.setViewportView(BTableInfo);
@@ -1201,7 +1194,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(MiddlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(jScrollPane2)
         );
 
@@ -1245,37 +1238,39 @@ public class Home extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
         // TODO add your handling code here:
-           String ItemCode="101";
-           String name = "cream soda";
         
-            int price = 100;
-            int  qty =0;
-            
-            String data[] = {ItemCode,name,Integer.toString(price),Integer.toString(qty+1)};
-            qty++;
-            DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
-            tblModel.addRow(data);
-           
-            
-            
-        
-        
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Cream soda";
+                int price=100;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+       
          //item quantity reduce from database
         Pos po = new Pos();
-        try{
+        try{  
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update bever set QTY=QTY-'"+qty+"' where ItemCode='101'";
 
             Statement sta = connection.createStatement();
-
+            
             int x = sta.executeUpdate(quer);
             if (x==0) {
+                
                 JOptionPane.showMessageDialog(null, "This is already exist");
+           
+                
             }
             else{
-                JOptionPane.showMessageDialog(null,"Recode is updated");
+               
+               
             }
+           // ******
 
         }
         catch(Exception ex){
@@ -1287,12 +1282,23 @@ public class Home extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Rolls";
+                int price=40;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
         //item quantity reduce from database
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='101'";
+            String quer = "Update ShortEats set  QTY=QTY-'"+qty+"' where ItemCode='101'";
 
             Statement sta = connection.createStatement();
 
@@ -1396,12 +1402,23 @@ public class Home extends javax.swing.JFrame {
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
         
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Orange Crush";
+                int price=50;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='102'";
+            String quer = "Update bever set  QTY=QTY-'"+qty+"' where ItemCode='102'";
 
             Statement sta = connection.createStatement();
 
@@ -1422,12 +1439,23 @@ public class Home extends javax.swing.JFrame {
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
         
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Pepsi";
+                int price=60;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='103'";
+            String quer = "Update bever set  QTY=QTY-'"+qty+"' where ItemCode='103'";
 
             Statement sta = connection.createStatement();
 
@@ -1448,12 +1476,23 @@ public class Home extends javax.swing.JFrame {
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
         
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="NesCafé";
+                int price=30;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='104'";
+            String quer = "Update bever set  QTY=QTY-'"+qty+"' where ItemCode='104'";
 
             Statement sta = connection.createStatement();
 
@@ -1473,13 +1512,25 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
-        Pos po = new Pos();
         
-         //item quantity reduce from database   
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Coffee";
+                int price=40;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
+         //item quantity reduce from database  
+         Pos po = new Pos();
+        
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='105'";
+            String quer = "Update bever set  QTY=QTY-'"+qty+"' where ItemCode='105'";
 
             Statement sta = connection.createStatement();
 
@@ -1499,13 +1550,24 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
+        
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Chocolate Milkshake";
+                int price=120;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
        
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='106'";
+            String quer = "Update bever set  QTY=QTY-'"+qty+"' where ItemCode='106'";
 
             Statement sta = connection.createStatement();
 
@@ -1525,13 +1587,23 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
+         //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Orange juice";
+                int price=130;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
         
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='107'";
+            String quer = "Update bever QTY=QTY-'"+qty+"' where ItemCode='107'";
 
             Statement sta = connection.createStatement();
 
@@ -1552,12 +1624,25 @@ public class Home extends javax.swing.JFrame {
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
         
+        
+        
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Falooda ";
+                int price=150;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
          //item quantity reduce from database   
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='108'";
+            String quer = "Update bever set QTY=QTY-'"+qty+"' where ItemCode='108'";
 
             Statement sta = connection.createStatement();
 
@@ -1578,13 +1663,24 @@ public class Home extends javax.swing.JFrame {
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
         
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Apple juice";
+                int price=165;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
         //item quantity reduce from database        
         Pos po = new Pos();
        
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update bever set QTY=QTY-1 where ItemCode='109'";
+            String quer = "Update bever set QTY=QTY-'"+qty+"' where ItemCode='109'";
 
             Statement sta = connection.createStatement();
 
@@ -1819,12 +1915,24 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         // TODO add your handling code here:
+        
+        //update table
+         String  qty =JOptionPane.showInputDialog(null,"Enter Quantity of item");
+                Integer.parseInt(qty);
+                String name="Fish Bun";
+                int price=45;
+                 String data[] = {name,Integer.toString(price),qty};
+                 
+                 DefaultTableModel tblModel =(DefaultTableModel)BTableInfo.getModel();
+                tblModel.addRow(data);
+        //*******
+        
          //item quantity reduce from database
         Pos po = new Pos();
         try{
             Connection connection = DriverManager.getConnection(po.connection,po.Host,po.Password);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='102'";
+            String quer = "Update ShortEats set  QTY=QTY-'"+qty+"' where ItemCode='102'";
 
             Statement sta = connection.createStatement();
 
