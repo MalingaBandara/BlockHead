@@ -199,7 +199,7 @@ public class Home extends javax.swing.JFrame {
         j1.setBackground(new java.awt.Color(242, 170, 76));
         j1.setForeground(new java.awt.Color(233, 75, 60));
 
-        jButton5.setBackground(new java.awt.Color(242, 170, 76));
+        jButton5.setBackground(new java.awt.Color(16, 24, 32));
         jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1.jpg"))); // NOI18N
         jButton5.setText("jButton5");
@@ -210,7 +210,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton24.setBackground(new java.awt.Color(242, 170, 76));
+        jButton24.setBackground(new java.awt.Color(16, 24, 32));
         jButton24.setForeground(new java.awt.Color(51, 51, 51));
         jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.jpg"))); // NOI18N
         jButton24.setText("jButton5");
@@ -221,7 +221,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton25.setBackground(new java.awt.Color(242, 170, 76));
+        jButton25.setBackground(new java.awt.Color(16, 24, 32));
         jButton25.setForeground(new java.awt.Color(51, 51, 51));
         jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5.jpg"))); // NOI18N
         jButton25.setText("jButton5");
@@ -232,7 +232,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton26.setBackground(new java.awt.Color(242, 170, 76));
+        jButton26.setBackground(new java.awt.Color(16, 24, 32));
         jButton26.setForeground(new java.awt.Color(51, 51, 51));
         jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6.jpg"))); // NOI18N
         jButton26.setText("jButton5");
@@ -243,7 +243,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton27.setBackground(new java.awt.Color(242, 170, 76));
+        jButton27.setBackground(new java.awt.Color(16, 24, 32));
         jButton27.setForeground(new java.awt.Color(51, 51, 51));
         jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Webp.net-resizeimage.jpg"))); // NOI18N
         jButton27.setText("jButton5");
@@ -254,7 +254,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton28.setBackground(new java.awt.Color(242, 170, 76));
+        jButton28.setBackground(new java.awt.Color(16, 24, 32));
         jButton28.setForeground(new java.awt.Color(51, 51, 51));
         jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Webp.net-resizeimage (2).jpg"))); // NOI18N
         jButton28.setText("jButton5");
@@ -265,7 +265,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton29.setBackground(new java.awt.Color(242, 170, 76));
+        jButton29.setBackground(new java.awt.Color(16, 24, 32));
         jButton29.setForeground(new java.awt.Color(51, 51, 51));
         jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Webp.net-resizeimage (1).jpg"))); // NOI18N
         jButton29.setText("jButton5");
@@ -276,7 +276,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton30.setBackground(new java.awt.Color(242, 170, 76));
+        jButton30.setBackground(new java.awt.Color(16, 24, 32));
         jButton30.setForeground(new java.awt.Color(51, 51, 51));
         jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2.jpg"))); // NOI18N
         jButton30.setText("jButton5");
@@ -287,7 +287,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton31.setBackground(new java.awt.Color(242, 170, 76));
+        jButton31.setBackground(new java.awt.Color(16, 24, 32));
         jButton31.setForeground(new java.awt.Color(51, 51, 51));
         jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.jpg"))); // NOI18N
         jButton31.setText("jButton5");
@@ -442,7 +442,7 @@ public class Home extends javax.swing.JFrame {
         j2.setBackground(new java.awt.Color(242, 170, 76));
         j2.setForeground(new java.awt.Color(51, 0, 0));
 
-        jButton6.setBackground(new java.awt.Color(242, 170, 76));
+        jButton6.setBackground(new java.awt.Color(16, 24, 32));
         jButton6.setForeground(new java.awt.Color(51, 51, 51));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/rolls.jpg"))); // NOI18N
         jButton6.setText("jButton5");
@@ -453,7 +453,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton32.setBackground(new java.awt.Color(242, 170, 76));
+        jButton32.setBackground(new java.awt.Color(16, 24, 32));
         jButton32.setForeground(new java.awt.Color(51, 51, 51));
         jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/burger.jpg"))); // NOI18N
         jButton32.setText("jButton5");
@@ -464,7 +464,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton33.setBackground(new java.awt.Color(242, 170, 76));
+        jButton33.setBackground(new java.awt.Color(16, 24, 32));
         jButton33.setForeground(new java.awt.Color(51, 51, 51));
         jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/cream bun.jpg"))); // NOI18N
         jButton33.setText("jButton5");
@@ -475,7 +475,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton38.setBackground(new java.awt.Color(242, 170, 76));
+        jButton38.setBackground(new java.awt.Color(16, 24, 32));
         jButton38.setForeground(new java.awt.Color(51, 51, 51));
         jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/hot dog.jpg"))); // NOI18N
         jButton38.setText("jButton5");
@@ -486,7 +486,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton39.setBackground(new java.awt.Color(242, 170, 76));
+        jButton39.setBackground(new java.awt.Color(16, 24, 32));
         jButton39.setForeground(new java.awt.Color(51, 51, 51));
         jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/vegetable bun.jpg"))); // NOI18N
         jButton39.setText("jButton5");
@@ -497,7 +497,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton40.setBackground(new java.awt.Color(242, 170, 76));
+        jButton40.setBackground(new java.awt.Color(16, 24, 32));
         jButton40.setForeground(new java.awt.Color(51, 51, 51));
         jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/pastry.jpg"))); // NOI18N
         jButton40.setText("jButton5");
@@ -508,7 +508,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton50.setBackground(new java.awt.Color(242, 170, 76));
+        jButton50.setBackground(new java.awt.Color(16, 24, 32));
         jButton50.setForeground(new java.awt.Color(51, 51, 51));
         jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/patis.jpg"))); // NOI18N
         jButton50.setText("jButton5");
@@ -519,7 +519,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton51.setBackground(new java.awt.Color(242, 170, 76));
+        jButton51.setBackground(new java.awt.Color(16, 24, 32));
         jButton51.setForeground(new java.awt.Color(51, 51, 51));
         jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/cutlets.jpg"))); // NOI18N
         jButton51.setText("jButton5");
@@ -530,7 +530,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton52.setBackground(new java.awt.Color(242, 170, 76));
+        jButton52.setBackground(new java.awt.Color(16, 24, 32));
         jButton52.setForeground(new java.awt.Color(51, 51, 51));
         jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shorteats/fish bun.jpg"))); // NOI18N
         jButton52.setText("jButton5");
@@ -680,8 +680,9 @@ public class Home extends javax.swing.JFrame {
         j3.setBackground(new java.awt.Color(242, 170, 76));
         j3.setForeground(new java.awt.Color(51, 0, 0));
 
-        jButton7.setBackground(new java.awt.Color(51, 0, 0));
+        jButton7.setBackground(new java.awt.Color(16, 24, 32));
         jButton7.setForeground(new java.awt.Color(51, 51, 51));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/chocklate ice cream.jpg"))); // NOI18N
         jButton7.setText("jButton5");
         jButton7.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -690,8 +691,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton53.setBackground(new java.awt.Color(51, 0, 0));
+        jButton53.setBackground(new java.awt.Color(16, 24, 32));
         jButton53.setForeground(new java.awt.Color(51, 51, 51));
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/manogo ice cream.jpg"))); // NOI18N
         jButton53.setText("jButton5");
         jButton53.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton53.addActionListener(new java.awt.event.ActionListener() {
@@ -700,8 +702,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton54.setBackground(new java.awt.Color(51, 0, 0));
+        jButton54.setBackground(new java.awt.Color(16, 24, 32));
         jButton54.setForeground(new java.awt.Color(51, 51, 51));
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/lava cake.jpg"))); // NOI18N
         jButton54.setText("jButton5");
         jButton54.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton54.addActionListener(new java.awt.event.ActionListener() {
@@ -710,8 +713,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton55.setBackground(new java.awt.Color(51, 0, 0));
+        jButton55.setBackground(new java.awt.Color(16, 24, 32));
         jButton55.setForeground(new java.awt.Color(51, 51, 51));
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/cup cake.jpg"))); // NOI18N
         jButton55.setText("jButton5");
         jButton55.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton55.addActionListener(new java.awt.event.ActionListener() {
@@ -720,8 +724,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton56.setBackground(new java.awt.Color(51, 0, 0));
+        jButton56.setBackground(new java.awt.Color(16, 24, 32));
         jButton56.setForeground(new java.awt.Color(51, 51, 51));
+        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/chocklate pie.jpg"))); // NOI18N
         jButton56.setText("jButton5");
         jButton56.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton56.addActionListener(new java.awt.event.ActionListener() {
@@ -730,8 +735,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton57.setBackground(new java.awt.Color(51, 0, 0));
+        jButton57.setBackground(new java.awt.Color(16, 24, 32));
         jButton57.setForeground(new java.awt.Color(51, 51, 51));
+        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/donut.jpg"))); // NOI18N
         jButton57.setText("jButton5");
         jButton57.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton57.addActionListener(new java.awt.event.ActionListener() {
@@ -740,8 +746,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton58.setBackground(new java.awt.Color(51, 0, 0));
+        jButton58.setBackground(new java.awt.Color(16, 24, 32));
         jButton58.setForeground(new java.awt.Color(51, 51, 51));
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/eclairs.jpg"))); // NOI18N
         jButton58.setText("jButton5");
         jButton58.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton58.addActionListener(new java.awt.event.ActionListener() {
@@ -750,8 +757,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton68.setBackground(new java.awt.Color(51, 0, 0));
+        jButton68.setBackground(new java.awt.Color(16, 24, 32));
         jButton68.setForeground(new java.awt.Color(51, 51, 51));
+        jButton68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/waffle.jpg"))); // NOI18N
         jButton68.setText("jButton5");
         jButton68.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton68.addActionListener(new java.awt.event.ActionListener() {
@@ -760,8 +768,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton69.setBackground(new java.awt.Color(51, 0, 0));
+        jButton69.setBackground(new java.awt.Color(16, 24, 32));
         jButton69.setForeground(new java.awt.Color(51, 51, 51));
+        jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/deserts/vanila icecream.jpg"))); // NOI18N
         jButton69.setText("jButton5");
         jButton69.setPreferredSize(new java.awt.Dimension(149, 183));
         jButton69.addActionListener(new java.awt.event.ActionListener() {
@@ -788,7 +797,7 @@ public class Home extends javax.swing.JFrame {
         jLabel58.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel58.setForeground(new java.awt.Color(255, 255, 255));
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setText("Oclair");
+        jLabel58.setText("Eclair");
 
         jLabel59.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
@@ -907,7 +916,7 @@ public class Home extends javax.swing.JFrame {
         j4.setBackground(new java.awt.Color(242, 170, 76));
         j4.setForeground(new java.awt.Color(51, 0, 0));
 
-        jButton8.setBackground(new java.awt.Color(51, 0, 0));
+        jButton8.setBackground(new java.awt.Color(16, 24, 32));
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/chicken rice.jpg"))); // NOI18N
         jButton8.setText("jButton5");
@@ -918,7 +927,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton70.setBackground(new java.awt.Color(51, 0, 0));
+        jButton70.setBackground(new java.awt.Color(16, 24, 32));
         jButton70.setForeground(new java.awt.Color(51, 51, 51));
         jButton70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/biriyani.jpg"))); // NOI18N
         jButton70.setText("jButton5");
@@ -929,7 +938,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton71.setBackground(new java.awt.Color(51, 0, 0));
+        jButton71.setBackground(new java.awt.Color(16, 24, 32));
         jButton71.setForeground(new java.awt.Color(51, 51, 51));
         jButton71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/egg kottu.jpg"))); // NOI18N
         jButton71.setText("jButton5");
@@ -940,7 +949,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton72.setBackground(new java.awt.Color(51, 0, 0));
+        jButton72.setBackground(new java.awt.Color(16, 24, 32));
         jButton72.setForeground(new java.awt.Color(51, 51, 51));
         jButton72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/chicken kotu.jpg"))); // NOI18N
         jButton72.setText("jButton5");
@@ -951,7 +960,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton73.setBackground(new java.awt.Color(51, 0, 0));
+        jButton73.setBackground(new java.awt.Color(16, 24, 32));
         jButton73.setForeground(new java.awt.Color(51, 51, 51));
         jButton73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/fish kottu.jpg"))); // NOI18N
         jButton73.setText("jButton5");
@@ -962,7 +971,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton74.setBackground(new java.awt.Color(51, 0, 0));
+        jButton74.setBackground(new java.awt.Color(16, 24, 32));
         jButton74.setForeground(new java.awt.Color(51, 51, 51));
         jButton74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/pasta.jpg"))); // NOI18N
         jButton74.setText("jButton5");
@@ -973,7 +982,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton75.setBackground(new java.awt.Color(51, 0, 0));
+        jButton75.setBackground(new java.awt.Color(16, 24, 32));
         jButton75.setForeground(new java.awt.Color(51, 51, 51));
         jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/noodles.jpg"))); // NOI18N
         jButton75.setText("jButton5");
@@ -984,7 +993,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton76.setBackground(new java.awt.Color(51, 0, 0));
+        jButton76.setBackground(new java.awt.Color(16, 24, 32));
         jButton76.setForeground(new java.awt.Color(51, 51, 51));
         jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/string hoppers.jpg"))); // NOI18N
         jButton76.setText("jButton5");
@@ -995,7 +1004,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton77.setBackground(new java.awt.Color(51, 0, 0));
+        jButton77.setBackground(new java.awt.Color(16, 24, 32));
         jButton77.setForeground(new java.awt.Color(51, 51, 51));
         jButton77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meals/fish rice.jpg"))); // NOI18N
         jButton77.setText("jButton5");
@@ -1148,6 +1157,7 @@ public class Home extends javax.swing.JFrame {
         BillPanel.setBackground(new java.awt.Color(16, 24, 32));
         BillPanel.setForeground(new java.awt.Color(0, 0, 51));
 
+        BTableInfo.setBackground(new java.awt.Color(242, 170, 76));
         BTableInfo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
