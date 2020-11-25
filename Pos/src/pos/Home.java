@@ -1601,7 +1601,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
