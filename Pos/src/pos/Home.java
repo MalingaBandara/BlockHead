@@ -1311,113 +1311,281 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+                
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
 
-        //update table
-        String qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
-        Integer.parseInt(qty);
-        String name = "Rolls";
-        int price = 40;
-        String data[] = {name, Integer.toString(price), qty};
-
-        DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
-        tblModel.addRow(data);
-        //*******
-
-        //item quantity reduce from database
-        Pos po = new Pos();
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='101'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-'" + qty + "' where ItemCode='101'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='101'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+ 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='103'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update set ShortEats QTY=QTY-1 where ItemCode='103'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='103'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
 
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='101'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert  set  QTY=QTY-1 where ItemCode='101'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='101'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='101'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set  QTY=QTY-1 where ItemCode='101'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='101'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -1975,576 +2143,1618 @@ public class Home extends javax.swing.JFrame {
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='102'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='102'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='102'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='103'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='103'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='103'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='104'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='104'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='104'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton54ActionPerformed
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='105'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='105'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='105'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton55ActionPerformed
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                           
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='106'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='106'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='106'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+
 
     }//GEN-LAST:event_jButton56ActionPerformed
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
-        //item quantity reduce from database
-        Pos po = new Pos();
+ 
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='107'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='107'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='107'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+
+        
     }//GEN-LAST:event_jButton57ActionPerformed
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
         // TODO add your handling code here:
+     
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='108'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='108'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='108'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+
+        
     }//GEN-LAST:event_jButton58ActionPerformed
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                               
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM dessert WHERE ItemCode='109'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update dessert set  QTY=QTY-1 where ItemCode='109'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update dessert set QTY=QTY-'" + qty + "' where ItemCode='109'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+
+        
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         // TODO add your handling code here:
 
-        //update table
-        String qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
-        Integer.parseInt(qty);
-        String name = "Fish Bun";
-        int price = 45;
-        String data[] = {name, Integer.toString(price), qty};
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
 
-        DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
-        tblModel.addRow(data);
-        //*******
-
-        //item quantity reduce from database
-        Pos po = new Pos();
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='102'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-'" + qty + "' where ItemCode='102'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='102'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+     
     }//GEN-LAST:event_jButton52ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                  
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='104'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='104'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='104'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
 
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='105'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='105'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='105'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton38ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='106'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='106'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='106'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton39ActionPerformed
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='107'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='107'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='107'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
 
+         //**end of 1st try 
+  
+ 
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                 
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='108'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set  QTY=QTY-1 where ItemCode='108'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='108'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
 
     }//GEN-LAST:event_jButton50ActionPerformed
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                        
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM ShortEats WHERE ItemCode='109'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update ShortEats set QTY=QTY-1 where ItemCode='109'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update ShortEats set QTY=QTY-'" + qty + "' where ItemCode='109'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
 
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='102'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update  meals set QTY=QTY-1 where ItemCode='102'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='102'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+     
+        
     }//GEN-LAST:event_jButton77ActionPerformed
 
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='103'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set  QTY=QTY-1 where ItemCode='103'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='103'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton70ActionPerformed
 
     private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
         // TODO add your handling code here:
-        //item quantity reduce from database
-        Pos po = new Pos();
+
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='104'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set QTY=QTY-1 where ItemCode='104'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='104'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton71ActionPerformed
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='105'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set  QTY=QTY-1 where ItemCode='105'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='105'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton72ActionPerformed
 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='106'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set QTY=QTY-1 where ItemCode='106'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='106'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton73ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='107'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set QTY=QTY-1 where ItemCode='107'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='107'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         // TODO add your handling code here:
 
-        //item quantity reduce from database
-        Pos po = new Pos();
+                              
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='108'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set  QTY=QTY-1 where ItemCode='108'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='108'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
         // TODO add your handling code here:
-        //item quantity reduce from database
-        Pos po = new Pos();
+ 
+                                      
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM meals WHERE ItemCode='109'";
+            PreparedStatement sta = connection.prepareStatement(quer);
 
-            String quer = "Update meals set QTY=QTY-1 where ItemCode='109'";
+            ResultSet rs = sta.executeQuery();
 
-            Statement sta = connection.createStatement();
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
 
-            int x = sta.executeUpdate(quer);
-            if (x == 0) {
-                JOptionPane.showMessageDialog(null, "This is already exist");
-            } else {
-                JOptionPane.showMessageDialog(null, "Recode is updated");
+                name = na;
+                price = pr;
+                //**
+                
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+               
             }
 
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex);
+             //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update meals set QTY=QTY-'" + qty + "' where ItemCode='109'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+
+         //**end of 1st try 
+  
+        
     }//GEN-LAST:event_jButton76ActionPerformed
 
     /**
