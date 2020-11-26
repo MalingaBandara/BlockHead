@@ -44,6 +44,7 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         Fullpanel = new javax.swing.JPanel();
         ButtonPanel = new javax.swing.JPanel();
         jButton34 = new javax.swing.JButton();
@@ -131,6 +132,12 @@ public class Home extends javax.swing.JFrame {
         BillPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         BTableInfo = new javax.swing.JTable();
+        lbl2 = new javax.swing.JLabel();
+        lblTot = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -642,7 +649,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -669,7 +676,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
             .addGroup(j2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, j2Layout.createSequentialGroup()
-                    .addContainerGap(483, Short.MAX_VALUE)
+                    .addContainerGap(499, Short.MAX_VALUE)
                     .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(287, 287, 287)))
         );
@@ -1167,19 +1174,61 @@ public class Home extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(BTableInfo);
 
+        lbl2.setBackground(new java.awt.Color(255, 255, 102));
+        lbl2.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
+        lbl2.setForeground(new java.awt.Color(102, 255, 153));
+        lbl2.setText("Total");
+        lbl2.setToolTipText("");
+
+        lblTot.setBackground(new java.awt.Color(255, 255, 102));
+        lblTot.setFont(new java.awt.Font("Lucida Grande", 0, 30)); // NOI18N
+        lblTot.setForeground(new java.awt.Color(153, 255, 153));
+
+        jButton1.setText("Clear");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Delete Bill Row");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BillPanelLayout = new javax.swing.GroupLayout(BillPanel);
         BillPanel.setLayout(BillPanelLayout);
         BillPanelLayout.setHorizontalGroup(
             BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(22, 22, 22)
+                .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(lblTot, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+            .addGroup(BillPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(47, 47, 47))
         );
         BillPanelLayout.setVerticalGroup(
             BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BillPanelLayout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 394, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTot, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(BillPanel);
@@ -1203,7 +1252,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(MiddlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(MiddlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
             .addComponent(jScrollPane2)
         );
 
@@ -1242,11 +1291,16 @@ public class Home extends javax.swing.JFrame {
         switchPanels(j3);
     }//GEN-LAST:event_jButton37ActionPerformed
 
+    double Total=0; // for calculate total
+    String tot;    //use for convert toString total value
+    
+            
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
         
         Pos po = new Pos();//get for connection
         String name;
+        
         String price;
         String qty = null;
 
@@ -1271,6 +1325,12 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
+                 
                 String data[] = {name, price, qty};
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
@@ -1339,6 +1399,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1408,7 +1474,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1479,6 +1551,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1549,6 +1627,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1617,6 +1701,13 @@ public class Home extends javax.swing.JFrame {
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
+                
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 String data[] = {name, price, qty};
 
@@ -1686,9 +1777,22 @@ public class Home extends javax.swing.JFrame {
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
+                
+                
+                //bill calculate
+                 Total = Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
 
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
+                
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
@@ -1757,6 +1861,14 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1825,7 +1937,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1868,6 +1986,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
 
                
+        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1894,7 +2013,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -1962,8 +2087,14 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
 
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
+                
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
@@ -2031,7 +2162,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2100,7 +2237,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2171,6 +2314,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2243,6 +2392,12 @@ public class Home extends javax.swing.JFrame {
 
                 String data[] = {name, price, qty};
 
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
+                
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
@@ -2313,6 +2468,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2384,6 +2545,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2455,6 +2622,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2526,6 +2699,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2597,6 +2776,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2668,6 +2853,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2739,6 +2930,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2809,6 +3006,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2878,7 +3081,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -2948,7 +3157,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3018,7 +3233,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3088,7 +3309,13 @@ public class Home extends javax.swing.JFrame {
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name, price, qty};
+                String data[] = {name,price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3159,6 +3386,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3229,6 +3462,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3299,6 +3538,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3370,6 +3615,12 @@ public class Home extends javax.swing.JFrame {
 
                 String data[] = {name, price, qty};
 
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
+                
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
@@ -3439,6 +3690,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3509,6 +3766,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3579,6 +3842,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3649,6 +3918,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3718,6 +3993,12 @@ public class Home extends javax.swing.JFrame {
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
+                
+                //bill calculate
+                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                 lblTot.setText(tot);
+                 //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
@@ -3756,6 +4037,42 @@ public class Home extends javax.swing.JFrame {
   
         
     }//GEN-LAST:event_jButton76ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) BTableInfo.getModel(); //to clear tabel
+               model.setRowCount(0);                                           //***
+               lblTot.setText("");
+               Total = 0;
+       
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        DefaultTableModel model = (DefaultTableModel) BTableInfo.getModel();
+        int SelectedRowIndex;
+        try{
+          SelectedRowIndex = BTableInfo.getSelectedRow();
+          model.removeRow(SelectedRowIndex);
+          
+          
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+         
+        }
+        int column = 0;
+       int row = BTableInfo.getSelectedRow();
+       String value = BTableInfo.getModel().getValueAt(row,2).toString();
+        Total =Total - Double.parseDouble(value);
+        tot = Double.toString(Total);
+        
+        lblTot.setText(tot);
+        
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3802,6 +4119,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel j2;
     private javax.swing.JPanel j3;
     private javax.swing.JPanel j4;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
@@ -3842,6 +4161,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton76;
     private javax.swing.JButton jButton77;
     private javax.swing.JButton jButton8;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -3880,5 +4200,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lblTot;
     // End of variables declaration//GEN-END:variables
 }
