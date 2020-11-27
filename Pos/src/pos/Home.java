@@ -1439,7 +1439,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1478,7 +1478,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='103'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1516,7 +1516,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1555,7 +1555,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='101'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1592,7 +1592,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1631,7 +1631,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='101'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1668,7 +1668,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1707,7 +1707,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='102'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1746,7 +1746,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1784,7 +1784,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='103'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1829,7 +1829,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1867,7 +1867,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='104'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1907,7 +1907,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1945,7 +1945,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='105'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1983,7 +1983,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2022,7 +2022,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='106'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2097,7 +2097,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='107'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2135,7 +2135,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2173,7 +2173,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='108'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2211,7 +2211,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='108'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2249,7 +2249,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='109'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2287,7 +2287,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2326,7 +2326,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='102'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2363,7 +2363,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2403,7 +2403,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='103'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2440,7 +2440,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2480,7 +2480,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='104'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2517,7 +2517,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2557,7 +2557,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='105'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2594,7 +2594,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2634,7 +2634,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='106'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2671,7 +2671,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2711,7 +2711,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='107'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2748,7 +2748,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2788,7 +2788,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='108'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2825,7 +2825,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='108'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2865,7 +2865,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='109'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2902,7 +2902,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2942,7 +2942,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='102'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3019,7 +3019,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='104'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3057,7 +3057,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3096,7 +3096,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='105'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3134,7 +3134,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3173,7 +3173,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='106'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3211,7 +3211,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3250,7 +3250,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='107'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3288,7 +3288,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3327,7 +3327,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='108'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3365,7 +3365,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='108'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3404,7 +3404,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='109'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3442,7 +3442,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3481,7 +3481,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='102'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3518,7 +3518,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3557,7 +3557,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='103'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3594,7 +3594,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3633,7 +3633,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='104'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3670,7 +3670,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3709,7 +3709,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='105'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3746,7 +3746,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3822,7 +3822,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3861,7 +3861,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='107'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3898,7 +3898,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3937,7 +3937,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='108'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -4012,7 +4012,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='109'";
+            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -4049,7 +4049,7 @@ public class Home extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update '"+DBTab+"' set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
