@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
+import javax.swing.JButton;
 
 /**
  *
@@ -25,10 +26,13 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        NewJFrame log = new NewJFrame();
+
+        log.hide();
     }
 
     public void switchPanels(JPanel panel) {  //change middle panel
-        MiddlePanel.removeAll();         
+        MiddlePanel.removeAll();
         MiddlePanel.add(panel);
         MiddlePanel.repaint();
         MiddlePanel.revalidate();
@@ -1275,95 +1279,87 @@ public class Home extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-      
+
     String DBTab;
-          
+
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         switchPanels(j2);        // TODO add your handling code here:
-        String DbTableName ="ShortEats"; 
+        String DbTableName = "ShortEats";
         DBTab = DbTableName;
     }//GEN-LAST:event_jButton34ActionPerformed
 
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
         switchPanels(j1);
-        
-        String DbTableName ="bever"; 
-        DBTab = DbTableName;
 
+       // String DbTableName = "bever";  // automatically Display a first panale there for we didn't want click this buton
+       // DBTab = DbTableName;          //add this consept we have got error in first run button not clicked
 
     }//GEN-LAST:event_jButton35ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         // TODO add your handling code here:
         switchPanels(j4);
-         String DbTableName ="meals"; 
+        String DbTableName = "meals";
         DBTab = DbTableName;
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
         // TODO add your handling code here:
         switchPanels(j3);
-         String DbTableName ="dessert"; 
+        String DbTableName = "dessert";
         DBTab = DbTableName;
     }//GEN-LAST:event_jButton37ActionPerformed
 
-    double Total=0; // for calculate total
+    double Total = 0; // for calculate total
     String tot;    //use for convert toString total value
-    
-            
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         Pos po = new Pos();//get for connection
         String name;
-        
         String price;
         String qty = null;
 
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
+            String quer = "SELECT * FROM  bever  WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
 
             while (rs.next()) {
-               
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
-                tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-                 
                 String data[] = {name, price, qty};
+
+                //bill calculate
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update  bever  set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1380,17 +1376,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-                
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1399,7 +1396,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='101'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1407,39 +1404,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
-                
-               
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1456,20 +1448,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
- 
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
 
-                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1478,7 +1468,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1486,37 +1476,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                 
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1533,20 +1520,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1555,7 +1540,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='101'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1567,32 +1552,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1609,20 +1592,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
 
-                               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1631,7 +1612,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='101'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='101'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1643,32 +1624,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='101'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='101'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1685,20 +1664,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
-        
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1707,7 +1684,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1715,23 +1692,20 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-               
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
-                
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 String data[] = {name, price, qty};
 
@@ -1739,14 +1713,13 @@ public class Home extends javax.swing.JFrame {
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1763,19 +1736,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
 
-               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1784,7 +1756,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1792,44 +1764,40 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-               
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
-                
-                
-                //bill calculate
-                 Total = Double.parseDouble(price) * Double.parseDouble(qty);
-                tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-
-                String data[] = {name,price, qty};
 
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total = Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-                
+                lblTot.setText(tot);
+                //*** (end of bill)
+
+                String data[] = {name, price, qty};
+
+                //bill calculate
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                lblTot.setText(tot);
+                //*** (end of bill)
+
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1846,19 +1814,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
 
-                
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1867,7 +1834,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1875,39 +1842,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
-                
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -1924,19 +1886,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
 
-               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -1945,7 +1906,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -1953,37 +1914,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-               
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2000,20 +1958,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
 
-               
-        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2022,7 +1978,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2030,33 +1986,30 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
@@ -2077,18 +2030,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-                     
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2097,236 +2050,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
-            PreparedStatement sta = connection.prepareStatement(quer);
-
-            ResultSet rs = sta.executeQuery();
-
-            while (rs.next()) {
-                String na = rs.getString("ItemName");
-                String pr = rs.getString("Price");
-                
-
-                name = na;
-                price = pr;
-                //**
-                
-
-                //update bill table
-                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
-                Integer.parseInt(qty);
-
-                String data[] = {name,price, qty};
-
-                //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
-                tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-                
-                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
-                tblModel.addRow(data);
-                //*******
-
-               
-            }
-
-             //item quantity reduce from database (2nd try)
-            try {
-                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
-
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
-
-                Statement sta2 = con.createStatement();
-
-                int x = sta.executeUpdate(quer1);
-                if (x == 0) {
-
-                    JOptionPane.showMessageDialog(null, "This is already exist");
-
-                } else {
-
-                }
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, ex);
-            }
-            // ** end of 2nd try
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-         //**end of 1st try 
-  
-    }//GEN-LAST:event_jButton28ActionPerformed
-
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        // TODO add your handling code here:
-
-                    
-        Pos po = new Pos();//get for connection
-        String name;
-        String price;
-        String qty = null;
-
-        //This try for get the feilds in database(1st try)
-        try {
-            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
-            PreparedStatement sta = connection.prepareStatement(quer);
-
-            ResultSet rs = sta.executeQuery();
-
-            while (rs.next()) {
-                String na = rs.getString("ItemName");
-                String pr = rs.getString("Price");
-                
-
-                name = na;
-                price = pr;
-                //**
-                
-
-                //update bill table
-                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
-                Integer.parseInt(qty);
-
-                String data[] = {name,price, qty};
-                
-                //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
-                tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-
-                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
-                tblModel.addRow(data);
-                //*******
-
-               
-            }
-
-             //item quantity reduce from database (2nd try)
-            try {
-                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
-
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
-
-                Statement sta2 = con.createStatement();
-
-                int x = sta.executeUpdate(quer1);
-                if (x == 0) {
-
-                    JOptionPane.showMessageDialog(null, "This is already exist");
-
-                } else {
-
-                }
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, ex);
-            }
-            // ** end of 2nd try
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-         //**end of 1st try 
-  
-    }//GEN-LAST:event_jButton29ActionPerformed
-
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
-        // TODO add your handling code here:
-
-                      
-        Pos po = new Pos();//get for connection
-        String name;
-        String price;
-        String qty = null;
-
-        //This try for get the feilds in database(1st try)
-        try {
-            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
-            PreparedStatement sta = connection.prepareStatement(quer);
-
-            ResultSet rs = sta.executeQuery();
-
-            while (rs.next()) {
-                String na = rs.getString("ItemName");
-                String pr = rs.getString("Price");
-               
-
-                name = na;
-                price = pr;
-                //**
-                
-
-                //update bill table
-                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
-                Integer.parseInt(qty);
-
-                String data[] = {name,price, qty};
-                
-                //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
-                tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-
-                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
-                tblModel.addRow(data);
-                //*******
-
-               
-            }
-
-             //item quantity reduce from database (2nd try)
-            try {
-                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
-
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
-
-                Statement sta2 = con.createStatement();
-
-                int x = sta.executeUpdate(quer1);
-                if (x == 0) {
-
-                    JOptionPane.showMessageDialog(null, "This is already exist");
-
-                } else {
-
-                }
-
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, ex);
-            }
-            // ** end of 2nd try
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-         //**end of 1st try 
-  
-  
-    }//GEN-LAST:event_jButton30ActionPerformed
-
-    private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
-        // TODO add your handling code here:
-
-                               
-        Pos po = new Pos();//get for connection
-        String name;
-        String price;
-        String qty = null;
-
-        //This try for get the feilds in database(1st try)
-        try {
-            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
+            String quer = "SELECT * FROM bever WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2338,32 +2062,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2380,21 +2102,234 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
+        try {
+            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM bever WHERE ItemCode='108'";
+            PreparedStatement sta = connection.prepareStatement(quer);
+
+            ResultSet rs = sta.executeQuery();
+
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
+
+                name = na;
+                price = pr;
+                //**
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                //bill calculate
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                lblTot.setText(tot);
+                //*** (end of bill)
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+            }
+
+            //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update bever set QTY=QTY-'" + qty + "' where ItemCode='108'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        //**end of 1st try 
+
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // TODO add your handling code here:
+
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
+        try {
+            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM bever WHERE ItemCode='109'";
+            PreparedStatement sta = connection.prepareStatement(quer);
+
+            ResultSet rs = sta.executeQuery();
+
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
+
+                name = na;
+                price = pr;
+                //**
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                //bill calculate
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                lblTot.setText(tot);
+                //*** (end of bill)
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+            }
+
+            //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='109'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        //**end of 1st try 
+
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
+        // TODO add your handling code here:
+
+        Pos po = new Pos();//get for connection
+        String name;
+        String price;
+        String qty = null;
+
+        //This try for get the feilds in database(1st try)
+        try {
+            Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='102'";
+            PreparedStatement sta = connection.prepareStatement(quer);
+
+            ResultSet rs = sta.executeQuery();
+
+            while (rs.next()) {
+                String na = rs.getString("ItemName");
+                String pr = rs.getString("Price");
+
+                name = na;
+                price = pr;
+                //**
+
+                //update bill table
+                qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
+                Integer.parseInt(qty);
+
+                String data[] = {name, price, qty};
+
+                //bill calculate
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                tot = Double.toString(Total);
+                lblTot.setText(tot);
+                //*** (end of bill)
+
+                DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
+                tblModel.addRow(data);
+                //*******
+
+            }
+
+            //item quantity reduce from database (2nd try)
+            try {
+                Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
+
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='102'";
+
+                Statement sta2 = con.createStatement();
+
+                int x = sta.executeUpdate(quer1);
+                if (x == 0) {
+
+                    JOptionPane.showMessageDialog(null, "This is already exist");
+
+                } else {
+
+                }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+            // ** end of 2nd try
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         // TODO add your handling code here:
 
-                               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2403,7 +2338,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2415,7 +2350,6 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
@@ -2424,23 +2358,22 @@ public class Home extends javax.swing.JFrame {
                 String data[] = {name, price, qty};
 
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-                
+                lblTot.setText(tot);
+                //*** (end of bill)
+
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2457,21 +2390,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         // TODO add your handling code here:
 
-                               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2480,7 +2410,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2492,32 +2422,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2534,21 +2462,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton54ActionPerformed
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
         // TODO add your handling code here:
 
-                               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2557,7 +2482,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2569,32 +2494,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2611,21 +2534,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton55ActionPerformed
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
         // TODO add your handling code here:
 
-                           
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2634,7 +2554,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2646,32 +2566,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2688,21 +2606,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton56ActionPerformed
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
- 
-                               
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2711,7 +2626,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2723,32 +2638,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2765,21 +2678,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
-        
     }//GEN-LAST:event_jButton57ActionPerformed
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
         // TODO add your handling code here:
-     
-                               
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2788,7 +2698,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2800,32 +2710,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='108'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2842,21 +2750,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
-        
     }//GEN-LAST:event_jButton58ActionPerformed
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
         // TODO add your handling code here:
 
-                               
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2865,7 +2770,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2877,32 +2782,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -2919,21 +2822,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
-        
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -2942,7 +2842,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -2950,33 +2850,30 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                 
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
@@ -2997,20 +2894,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-     
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton52ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
 
-                  
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3019,7 +2914,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3027,37 +2922,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3074,20 +2966,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3096,7 +2986,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3104,37 +2994,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3151,20 +3038,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton38ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3173,7 +3058,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='106'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3181,37 +3066,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                 
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3228,20 +3110,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton39ActionPerformed
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3250,7 +3130,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3258,37 +3138,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                 
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3305,20 +3182,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
- 
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
         // TODO add your handling code here:
 
-                 
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3327,7 +3202,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3335,37 +3210,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
-                String data[] = {name,price, qty};
-                
+                String data[] = {name, price, qty};
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='108'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='108'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3382,20 +3254,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton50ActionPerformed
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         // TODO add your handling code here:
 
-                        
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3404,7 +3274,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3412,37 +3282,34 @@ public class Home extends javax.swing.JFrame {
             while (rs.next()) {
                 String na = rs.getString("ItemName");
                 String pr = rs.getString("Price");
-                
 
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3459,20 +3326,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
 
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3481,7 +3346,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='102'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='102'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3493,32 +3358,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='102'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='102'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3535,20 +3398,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-     
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton77ActionPerformed
 
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3557,7 +3418,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='103'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='103'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3569,32 +3430,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='103'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='103'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3611,20 +3470,19 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton70ActionPerformed
+
 
     private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3633,7 +3491,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='104'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='104'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3645,7 +3503,6 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
@@ -3654,23 +3511,22 @@ public class Home extends javax.swing.JFrame {
                 String data[] = {name, price, qty};
 
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
-                
+                lblTot.setText(tot);
+                //*** (end of bill)
+
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='104'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='104'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3687,20 +3543,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton71ActionPerformed
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3709,7 +3563,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='105'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='105'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3721,32 +3575,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='105'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='105'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3763,20 +3615,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton72ActionPerformed
 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3785,7 +3635,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM '"+DBTab+"' WHERE ItemCode='106'";
+            String quer = "SELECT * FROM '" + DBTab + "' WHERE ItemCode='106'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3797,32 +3647,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='106'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='106'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3839,20 +3687,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton73ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
         // TODO add your handling code here:
 
-                                      
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3861,7 +3707,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='107'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='107'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3873,32 +3719,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='107'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='107'";
 
                 Statement sta2 = con.createStatement();
 
@@ -3915,20 +3759,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         // TODO add your handling code here:
 
-                              
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -3937,7 +3779,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='108'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='108'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -3949,28 +3791,26 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
@@ -3991,19 +3831,18 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
         // TODO add your handling code here:
- 
-                                      
+
         Pos po = new Pos();//get for connection
         String name;
         String price;
@@ -4012,7 +3851,7 @@ public class Home extends javax.swing.JFrame {
         //This try for get the feilds in database(1st try)
         try {
             Connection connection = DriverManager.getConnection(po.connection, po.Host, po.Password);
-            String quer = "SELECT * FROM "+DBTab+" WHERE ItemCode='109'";
+            String quer = "SELECT * FROM " + DBTab + " WHERE ItemCode='109'";
             PreparedStatement sta = connection.prepareStatement(quer);
 
             ResultSet rs = sta.executeQuery();
@@ -4024,32 +3863,30 @@ public class Home extends javax.swing.JFrame {
                 name = na;
                 price = pr;
                 //**
-                
 
                 //update bill table
                 qty = JOptionPane.showInputDialog(null, "Enter Quantity of item");
                 Integer.parseInt(qty);
 
                 String data[] = {name, price, qty};
-                
+
                 //bill calculate
-                 Total += Double.parseDouble(price) * Double.parseDouble(qty);
+                Total += Double.parseDouble(price) * Double.parseDouble(qty);
                 tot = Double.toString(Total);
-                 lblTot.setText(tot);
-                 //*** (end of bill)
+                lblTot.setText(tot);
+                //*** (end of bill)
 
                 DefaultTableModel tblModel = (DefaultTableModel) BTableInfo.getModel();
                 tblModel.addRow(data);
                 //*******
 
-               
             }
 
-             //item quantity reduce from database (2nd try)
+            //item quantity reduce from database (2nd try)
             try {
                 Connection con = DriverManager.getConnection(po.connection, po.Host, po.Password);
 
-                String quer1 = "Update "+DBTab+" set QTY=QTY-'" + qty + "' where ItemCode='109'";
+                String quer1 = "Update " + DBTab + " set QTY=QTY-'" + qty + "' where ItemCode='109'";
 
                 Statement sta2 = con.createStatement();
 
@@ -4066,58 +3903,50 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, ex);
             }
             // ** end of 2nd try
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
 
-         //**end of 1st try 
-  
-        
+        //**end of 1st try 
+
     }//GEN-LAST:event_jButton76ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) BTableInfo.getModel(); //to clear tabel
-               model.setRowCount(0);                                           //***
-               lblTot.setText("");
-               Total = 0;
-       
-        
+        model.setRowCount(0);                                           //***
+        lblTot.setText("");
+        Total = 0;
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+
         int column = 0;
-       int row = BTableInfo.getSelectedRow();    
-       //String ItemCOde = BTableInfo.getModel().getValueAt(row,0).toString();
-       String value = BTableInfo.getModel().getValueAt(row,1).toString();        //setct price row
-       String QTY = BTableInfo.getModel().getValueAt(row,2).toString();          //select QTY row
-       
-        Total =Total - (Double.parseDouble(value)*Double.parseDouble(QTY));        // decrement calculation 
+        int row = BTableInfo.getSelectedRow();
+        //String ItemCOde = BTableInfo.getModel().getValueAt(row,0).toString();
+        String value = BTableInfo.getModel().getValueAt(row, 1).toString();        //setct price row
+        String QTY = BTableInfo.getModel().getValueAt(row, 2).toString();          //select QTY row
+
+        Total = Total - (Double.parseDouble(value) * Double.parseDouble(QTY));        // decrement calculation 
         String tota = Double.toString(Total);                                   //convert to new Total to string
-        
+
         DefaultTableModel model = (DefaultTableModel) BTableInfo.getModel();
         int SelectedRowIndex;
-        try{
-          SelectedRowIndex = BTableInfo.getSelectedRow();  //to select row 
-          model.removeRow(SelectedRowIndex);               //to remove the row
-          lblTot.setText(tota);                            //set a new price
-        
-          
-          
-          
-        }
-        catch(Exception ex){
+        try {
+            SelectedRowIndex = BTableInfo.getSelectedRow();  //to select row 
+            model.removeRow(SelectedRowIndex);               //to remove the row
+            lblTot.setText(tota);                            //set a new price
+
+        } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
-         
+
         }
-        
-        
-        
-        
-       
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -4137,13 +3966,17 @@ public class Home extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
