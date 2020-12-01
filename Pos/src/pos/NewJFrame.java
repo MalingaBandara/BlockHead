@@ -1,22 +1,21 @@
 
-package my_package;
+package pos;
 
 import javax.swing.JOptionPane;
 
 public class NewJFrame extends javax.swing.JFrame 
 {
 
-    NewClass obj =new NewClass();
     
-    
-    String U;
-    String P;
-    
-    public NewJFrame(String U,String P) 
+    public NewJFrame() 
     {
         initComponents();
-        this.U=U;
-        this.P=P;
+        
+        
+        
+        
+       
+        
     }
 
    
@@ -76,7 +75,7 @@ public class NewJFrame extends javax.swing.JFrame
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/the Canteen.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/the Canteen.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         pwd.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +133,7 @@ public class NewJFrame extends javax.swing.JFrame
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,21 +152,25 @@ public class NewJFrame extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            System.exit(0);
-
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        NewClass NCobj = new NewClass();
-        
+         
         String userName = txtUname.getText();
         String password = pwd.getText();
         
+       
         
-        if ( userName.trim().equals(U) && password.trim().equals(P) ) {
-            JOptionPane.showMessageDialog(rootPane, "Welcome");
+        
+        if (userName.trim().equals("admin") && password.trim().equals("password")) {
+            
+           Home hm = new Home();
+           hm.setVisible(true);
+
+           
+            
+            
 
         } 
         else 
@@ -182,13 +185,7 @@ public class NewJFrame extends javax.swing.JFrame
     }//GEN-LAST:event_pwdActionPerformed
 
     
-    public static void main(String args[]) 
-    {
-        
-        
-        NewClass obj=new NewClass();
-        obj.setUname("admin");
-        obj.setPword("password");
+    public static void main(String args[]) {
         
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -214,15 +211,9 @@ public class NewJFrame extends javax.swing.JFrame
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            
-
-            
-            
-            public void run() 
-            {
-                new NewJFrame( obj.getUname(),obj.getPword() ).setVisible(true);
+            public void run() {
+                new NewJFrame().setVisible(true);
             }
-            
         });
     }
 
